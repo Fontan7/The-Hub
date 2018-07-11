@@ -7,7 +7,7 @@
 
 
 
-1 Dentro de la carpeta Posting laravel abran la consola.
+1 Dentro de la carpeta The-Hub abran la consola.
 
 2 Pongan el comando composer install y esperen.
 
