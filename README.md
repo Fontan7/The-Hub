@@ -1,6 +1,6 @@
-# Posting-4.1
+# The-Hub
 
-Posting version using bootstrap 4.1 and Laravel framework. Alone
+ version using bootstrap 4.1 and Laravel framework. Alone
 
 
 -------------- SI TIENEN PROBLEMAS PARA ARRANCAR EL PHP ARTISAN SERVE -------------
