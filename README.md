@@ -19,4 +19,4 @@
 
 -----------------------------------------------------------------------------------
 
-1 En el archivo .env en el campo APP_NAME:Laravel cambiarlo por APP_NAME:Posting ,guardar y reiniciar servidor.
+1 En el archivo .env en el campo APP_NAME:Laravel cambiarlo por APP_NAME:The-Hub ,guardar y reiniciar servidor.
