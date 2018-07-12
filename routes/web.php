@@ -15,6 +15,10 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('login', function(){
+  return redirect('/');
+});
+
 Route::post('/register', [
   'uses' => 'UserController@postRegister',
   'as' => 'register'
@@ -30,6 +34,12 @@ Route::get('/home', [
   'as' => 'home',
   'middleware' => 'auth'
 ]);
+
+Route::post('/createpost',[
+  'uses' => 'PostController@postCreatePost',
+  'as' => 'post.create'
+]);
+
 
 //Route::group(['middleware'=>['web']], function(){
 //});
