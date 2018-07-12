@@ -40,13 +40,7 @@
         <a id="wbt" href="https://bitbucket.org/maxhass/">BitBucket</a>
       </div>
       <br>
-      @if (count($errors) > 0)
-       <div class="">
-         @foreach($errors->all() as $error)
-           <li>{{$error}}</li>
-         @endforeach
-      @endif
-
+    @include('includes/message-box')
       <form action="{{ route('login') }}" method="post">
         <div class="login1" id="welcome-login">
           <h2>Login</h2>

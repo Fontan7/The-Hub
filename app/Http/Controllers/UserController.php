@@ -45,13 +45,6 @@ class Usercontroller extends Controller
    return redirect()->route('home');
  }
 
-public function getHome()
-{
-  return view ('home');
-}
-
-
-
 
 
 

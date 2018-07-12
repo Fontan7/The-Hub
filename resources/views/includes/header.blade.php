@@ -1,7 +1,7 @@
 
-<nav class="nav-nav">
+<nav class="nav-nav m-b-md">
     <ul>
-      <li>The-Hub ©<li>
+      <li><h3>The-Hub ©</h3><li>
       </ul>
       <ul>
         <li>

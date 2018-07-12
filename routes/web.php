@@ -30,7 +30,7 @@ Route::post('/login', [
 ]);
 
 Route::get('/home', [
-  'uses' => 'UserController@getHome',
+  'uses' => 'PostController@getHome',
   'as' => 'home',
   'middleware' => 'auth'
 ]);
