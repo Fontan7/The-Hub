@@ -11,7 +11,7 @@
       <form class=" col-md-12" action="{{ route('post.create') }}" method="post">
         <div class="form-group">
           <textarea class"form-control" name="body" id="new-post" rows="5" placeholder="Your Post" > </textarea>
-           @include('includes/message-box')
+          @include('includes/message-box')
         </div>
         <button class="btn btn-primary" type="submit" name="button"> Create Post! </button>
         <input type="hidden" name="_token" value="{{ Session::token() }}">
@@ -26,21 +26,19 @@
       </header>
       @foreach ($posts as $post)
         <article class="post">
-          <p>A mi hermano le gustan las milanesas de pollo, pero yo prefiero comer crayones.</p>
-        <div class="info">
-          Posted by YO MOMMA on 15 Aug 2018
-        </div>
-        <div class="interaction">
-          <a href="#">Like </a> |
-          <a href="#">Dislike </a> |
-          <a href="#">Comment </a> |
-          <a href="#">Delete </a> |
-        </div>
-      </article>
+          <p> {{ $post->body }}</p>
+          <div class="info">
+            Posted by {{ $post->user->username }} on {{ $post->created_at}}
+          </div>
+          <div class="interaction">
+            <a href="#">Like </a> |
+            <a href="#">Dislike </a> |
+            <a href="#">Comment </a> |
+            <a href="{{ route('post/delete', ['post_id' => $post->id]) }}">Delete </a> |
+          </div>
+        </article>
       @endforeach
 
     </div>
   </section>
-
-
 @endsection

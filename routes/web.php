@@ -37,9 +37,15 @@ Route::get('/home', [
 
 Route::post('/createpost',[
   'uses' => 'PostController@postCreatePost',
-  'as' => 'post.create'
+  'as' => 'post.create',
+  'middleware' => 'auth'
 ]);
 
+Route::get('/delete-post/{post_id}', [
+  'uses' => 'PostController@getDeletePost',
+  'as' => 'post/delete',
+  'middleware' => 'auth'
+]);
 
 //Route::group(['middleware'=>['web']], function(){
 //});

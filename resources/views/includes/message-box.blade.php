@@ -9,5 +9,9 @@
 @endif
 
 @if ( Session::has('message'))
-    {{ Session::get('message')}}
+  <ul id="succesUl">
+    <li>
+     {{ Session::get('message')}}
+   </li>
+ </ul> 
 @endif

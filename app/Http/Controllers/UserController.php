@@ -46,6 +46,11 @@ class Usercontroller extends Controller
  }
 
 
+  public function getLogout()
+  {
+    Auth::logout();
+  }
+
 
 
 

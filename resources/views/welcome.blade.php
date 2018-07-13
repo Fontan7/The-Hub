@@ -37,7 +37,7 @@
         <a id="wrg" href="#welcome-register">Register</a>
         <a id="wct" href="https://discord.gg/PYMYDzz">Discord</a>
         <a id="wus" href="https://linkedin.com/in/nahuel-fontan-02839715a">LinkedIn</a>
-        <a id="wbt" href="https://bitbucket.org/maxhass/">BitBucket</a>
+        <a id="wbt" href="https://github.com/Fontan7/The-Hub">GitHub</a>
       </div>
       <br>
     @include('includes/message-box')
