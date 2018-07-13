@@ -1,27 +1,18 @@
 
 <nav class="nav-nav m-b-md">
     <ul>
-      <li><h3>The-Hub ©</h3><li>
+      <li> <a href="{{ route('home') }}"> <h3>The-Hub ©</h3></a> <li>
       </ul>
       <ul>
         <li>
-          <a href="https://www.facebook.com/fontan.fontan.31">
-            <i class="fab fa-facebook"> </i>
+          <a id="profile" href="{{ route('profile')}}">
+            <i class="fas fa-user-circle"></i>
           </a>
         </li>
+
         <li>
-          <a href="https://discord.gg/PYMYDzz">
-            <i class="fab fa-discord"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/fontan.fontan">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/nahuel-fontan-02839715a">
-            <i class="fab fa-linkedin"></i>
+          <a id="logout" href="{{ route('logout')}}">
+            <i class="fas fa-sign-out-alt"></i>
           </a>
         </li>
       </ul>

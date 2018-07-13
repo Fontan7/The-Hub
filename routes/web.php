@@ -47,5 +47,29 @@ Route::get('/delete-post/{post_id}', [
   'middleware' => 'auth'
 ]);
 
-//Route::group(['middleware'=>['web']], function(){
-//});
+Route::get('/logout',[
+  'uses' => 'Usercontroller@getLogout',
+  'as' => 'logout'
+
+]);
+
+Route::post('/edit', [
+    'uses' => 'PostController@postEditPost',
+    'as' => 'edit'
+]);
+
+
+Route::get('/profile',[
+  'uses' => 'UserController@getProfile',
+  'as' => 'profile'
+]);
+
+Route::post('/updateprofile',[
+  'uses' => 'UserController@postSaveProfile',
+  'as' => 'profile/save'
+]);
+
+Route::get('userimage/{filename}', [
+  'uses' => 'UserController@getUserImage',
+  'as' => 'profile/image'
+]);

@@ -44,6 +44,10 @@ section.posts{
   color: rgb(14, 247, 37);
 }
 
+#edit-modal h5, label, textarea{
+  color: black;
+}
+
 /*------------------------Nav------------------------------*/
 
 nav{
@@ -72,8 +76,6 @@ nav{
    100% {background-color: magenta;}
 
 }
-
-
   .nav-nav ul {
     position: relative;
     display: flex;
@@ -86,6 +88,45 @@ nav{
     list-style-type: none;
   }
   .nav-nav li a, .nav-nav li {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+#logout i{
+  font-size: 1.9em
+}
+#profile i{
+  font-size: 1.9em
+}
+
+/*------------------------Footer------------------------------*/
+footer{
+  position:absolute;
+  width:100%;
+  height:70px;
+  top: 140%;
+}
+.footer-nav {
+  background-color: #00ff4f;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;}
+
+  .footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .footer-nav li {
+    padding: 5px 5px;
+    list-style-type: none;
+  }
+  .footer-nav li a, .footer-nav li {
     color: #222;
     text-decoration: none;
     font-weight: bold;

@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Iluminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class Usercontroller extends Controller
 {
@@ -26,7 +29,7 @@ class Usercontroller extends Controller
  {
    $this->validate($request, [
      'email' => 'email|unique:users|required',
-     'username' => 'max:25|unique:users|required',
+     'username' => 'max:25|min:3|unique:users|required',
      'password' => 'min:6|required'
    ]);
 
@@ -49,9 +52,34 @@ class Usercontroller extends Controller
   public function getLogout()
   {
     Auth::logout();
+    return redirect()-> route('home');
   }
 
+  public function getProfile()
+  {
+    return view('profile', ['user' => Auth::user()]);
+  }
 
+  public function postSaveProfile(Request $request)
+  {
+    $this->validate($request,[
+      'username' => 'required|max:50|min:3'
+    ]);
+    $user = Auth::user();
+    $user->username = $request['username'];
+    $user->update();
+    $file = $request->file('image');
+    $filename = $request['username'] . '-' . $user->id . 'jpg';
+    if($file){
+      Storage::disk('local')->put($filename, File::get($file));
+    }
+    return redirect()->route('profile');
+  }
+  public function getUserImage($filename)
+  {
+    $file = Storage::disk('local')->get($filename);
+    return new Response($file, 200);
+  }
 
 
 }
