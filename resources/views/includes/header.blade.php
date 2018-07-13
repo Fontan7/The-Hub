@@ -1,7 +1,7 @@
 
 <nav class="nav-nav m-b-md">
     <ul>
-      <li> <a href="{{ route('home') }}"> <h3>The-Hub ©</h3></a> <li>
+      <li> <a href="{{ route('home') }}"> <h3>The-Hub</h3></a> <li>
       </ul>
       <ul>
         <li>

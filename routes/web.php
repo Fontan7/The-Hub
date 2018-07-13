@@ -14,6 +14,9 @@
 Route::get('/', function () {
   return view('welcome');
 });
+/*Route::get('', function () {
+  return view('404');
+});*/
 
 Route::get('login', function(){
   return redirect('/');

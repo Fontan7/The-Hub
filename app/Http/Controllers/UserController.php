@@ -68,10 +68,13 @@ class Usercontroller extends Controller
     $user = Auth::user();
     $user->username = $request['username'];
     $user->update();
-    $file = $request->file('image');
-    $filename = $request['username'] . '-' . $user->id . 'jpg';
-    if($file){
-      Storage::disk('local')->put($filename, File::get($file));
+
+
+    if($request->hasFile('image')){
+      $file = $request->file('image');
+      $filename = $request['username'] . '-' . $user->id . '.' . $file->extension();
+      $file->storeAs('userimage', $filename);
+      //Storage::disk('local')->put($filename, File::get($file));
     }
     return redirect()->route('profile');
   }
